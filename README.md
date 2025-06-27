@@ -66,23 +66,29 @@
 
 
 Mod/
-├── Database/              # Контекст и модели БД
-│   └── ZooContext.cs      # EF Core контекст
-├── Models/                # Модели из БД
-│   ├── Animal.cs          # Животные
-│   ├── Enclosure.cs       # Вольеры
-│   ├── TicketType.cs      # Типы билетов
-│   ├── UserAccount.cs     # Учетные записи пользователей
-│   └── ...                # Другие таблицы
-├── ViewModels/            # ViewModel'ы
-│   └── MainViewModel.cs  # Главная логика приложения
-├── Views/                 # XAML-страницы
-│   ├── MainWindow.xaml    # Главное окно
-│   ├── TicketsPage.xaml   # Страница с билетами
-│   ├── CartPage.xaml      # Корзина
-│   └── AdminPanelPage.xaml# Административная панель
-├── Command/               # Команды
-│   └── RelayCommand.cs   # Реализация ICommand
-└── Services/              # Сервисы
-    └── NavigationService.cs # Навигация между страницами
-
+├── Database/                  # Контекст базы данных
+│   └── ZooContext.cs          # EF Core контекст для PostgreSQL
+│
+├── Models/                    # Модели, сгенерированные из БД
+│   ├── Animal.cs              # Животные (animal)
+│   ├── Enclosure.cs           # Вольеры (enclosure)
+│   ├── TicketType.cs          # Типы билетов (ticket_type)
+│   ├── UserAccount.cs         # Учетные записи пользователей (user_account)
+│   ├── Role.cs                # Роли пользователей (role)
+│   ├── Ticket.cs              # Проданные билеты (ticket)
+│   └── ...                    # Другие модели (Tour, ParticipationInTour и т.д.)
+│
+├── ViewModels/                # Реализация MVVM-логики
+│   └── MainViewModel.cs       # Основной ViewModel с командами и данными
+│
+├── Views/                     # Представления (XAML страницы)
+│   ├── MainWindow.xaml        # Главное окно приложения
+│   ├── TicketsPage.xaml       # Страница просмотра билетов
+│   ├── CartPage.xaml          # Корзина с выбранными билетами
+│   └── AdminPanelPage.xaml    # Административная панель
+│
+├── Command/                   # Реализация команд
+│   └── RelayCommand.cs       # Базовая реализация ICommand
+│
+└── Services/                  # Сервисы приложения
+    └── NavigationService.cs   # Навигация между страницами через Frame
