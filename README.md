@@ -61,5 +61,28 @@
 - **MVVM** — архитектурный паттерн разделения бизнес-логики и представления
 - **Entity Framework Core** — ORM для работы с PostgreSQL
 - **PostgreSQL** — реляционная система управления базами данных
+
 - **UserControl + Frame NavigationService** — модульность и навигация между страницами
+
+
+Mod/
+├── Database/              # Контекст и модели БД
+│   └── ZooContext.cs      # EF Core контекст
+├── Models/                # Модели из БД
+│   ├── Animal.cs          # Животные
+│   ├── Enclosure.cs       # Вольеры
+│   ├── TicketType.cs      # Типы билетов
+│   ├── UserAccount.cs     # Учетные записи пользователей
+│   └── ...                # Другие таблицы
+├── ViewModels/            # ViewModel'ы
+│   └── MainViewModel.cs  # Главная логика приложения
+├── Views/                 # XAML-страницы
+│   ├── MainWindow.xaml    # Главное окно
+│   ├── TicketsPage.xaml   # Страница с билетами
+│   ├── CartPage.xaml      # Корзина
+│   └── AdminPanelPage.xaml# Административная панель
+├── Command/               # Команды
+│   └── RelayCommand.cs   # Реализация ICommand
+└── Services/              # Сервисы
+    └── NavigationService.cs # Навигация между страницами
 
