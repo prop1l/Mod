@@ -61,6 +61,5 @@
 - **MVVM** — архитектурный паттерн разделения бизнес-логики и представления
 - **Entity Framework Core** — ORM для работы с PostgreSQL
 - **PostgreSQL** — реляционная система управления базами данных
-- **RelayCommand / ICommand** — реализация команд без кода в CodeBehind
 - **UserControl + Frame NavigationService** — модульность и навигация между страницами
 
