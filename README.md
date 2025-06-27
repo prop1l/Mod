@@ -21,20 +21,5 @@ Zoo Ticket App — это десктоп-приложение на базе WPF,
 - **RelayCommand** – реализация команд для MVVM
 - **Frame NavigationService** – навигация между страницами
 
-### Структура проекта
 
-Mod/
-├── Database/ # Контекст и модели БД
-│ └── ZooContext.cs # EF Core контекст
-├── ViewModels/ # Реализация ViewModel'ей
-│ └── MainViewModel.cs # Главная логика приложения
-├── Views/ # XAML-страницы
-│ ├── MainWindow.xaml # Главное окно
-│ ├── TicketsPage.xaml # Страница с билетами
-│ ├── CartPage.xaml # Корзина
-│ └── AdminPanelPage.xaml# Административная панель
-├── Command/ # Команды
-│ └── RelayCommand.cs # Реализация ICommand
-├── Services/ # Сервисы
-│ └── NavigationService.cs # Навигация между страницами
-└── Models/ # Модели из БД
+
